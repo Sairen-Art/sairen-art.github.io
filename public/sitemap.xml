@@ -35,25 +35,19 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-12-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lora/</loc>
+    <loc>http://localhost:1313/tags/janku-v6/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/loras/</loc>
+    <loc>http://localhost:1313/models/one-obsession-v19/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/loras/mystyle_lora_v1-0.8/</loc>
+    <loc>http://localhost:1313/tags/one-obsession-v19/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/original/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ponydiffusion/</loc>
-    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/post/gallery/first-art/</loc>
-    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/models/ponydiffusionv6-xl/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
@@ -64,5 +58,7 @@
   </url><url>
     <loc>http://localhost:1313/page/privacy/</loc>
     <lastmod>2025-12-16T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/loras/</loc>
   </url>
 </urlset>

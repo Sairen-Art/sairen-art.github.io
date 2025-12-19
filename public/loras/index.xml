@@ -6,15 +6,6 @@
         <description>Recent content in Loras on Sairen.Art &amp; Tech Lab</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <copyright>© 2025 Sairen.Art. All rights reserved.</copyright>
-        <lastBuildDate>Tue, 16 Dec 2025 13:46:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/loras/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>MyStyle_LoRA_v1: 0.8</title>
-        <link>http://localhost:1313/loras/mystyle_lora_v1-0.8/</link>
-        <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
-        
-        <guid>http://localhost:1313/loras/mystyle_lora_v1-0.8/</guid>
-        <description></description>
-        </item>
-        
+        <copyright>© 2025 Sairen.Art. All rights reserved.</copyright><atom:link href="http://localhost:1313/loras/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

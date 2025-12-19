@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="PonyDiffusion V6をベースに、自作した画風LoRA（強度0.8）の適用テストを行いました。色使いと線の太さの変化に注目しています。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="JANKU V6とOne obsession V19の比較検証を行いました。">
 <title>PonyDiffusion V6 と自作LoRAの比較検証</title>
 
 <link rel='canonical' href='http://localhost:1313/post/gallery/first-art/'>
 
 <link rel="stylesheet" href="/scss/style.min.4d36f8dc1fd48129e1635deb4b8eb2870fa09474f7280c4cb606d40b2526994b.css"><meta property='og:title' content="PonyDiffusion V6 と自作LoRAの比較検証">
-<meta property='og:description' content="PonyDiffusion V6をベースに、自作した画風LoRA（強度0.8）の適用テストを行いました。色使いと線の太さの変化に注目しています。">
+<meta property='og:description' content="JANKU V6とOne obsession V19の比較検証を行いました。">
 <meta property='og:url' content='http://localhost:1313/post/gallery/first-art/'>
 <meta property='og:site_name' content='Sairen.Art &amp; Tech Lab'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='PonyDiffusion' /><meta property='article:tag' content='LoRA' /><meta property='article:tag' content='Original' /><meta property='article:published_time' content='2025-12-16T13:46:55&#43;09:00'/><meta property='article:modified_time' content='2025-12-16T13:46:55&#43;09:00'/><meta property='og:image' content='http://localhost:1313/cover.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='JANKU V6' /><meta property='article:tag' content='One obsession V19' /><meta property='article:tag' content='Original' /><meta property='article:published_time' content='2025-12-16T13:46:55&#43;09:00'/><meta property='article:modified_time' content='2025-12-16T13:46:55&#43;09:00'/><meta property='og:image' content='http://localhost:1313/post/gallery/first-art/cover.webp' />
 <meta name="twitter:title" content="PonyDiffusion V6 と自作LoRAの比較検証">
-<meta name="twitter:description" content="PonyDiffusion V6をベースに、自作した画風LoRA（強度0.8）の適用テストを行いました。色使いと線の太さの変化に注目しています。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/cover.webp' />
+<meta name="twitter:description" content="JANKU V6とOne obsession V19の比較検証を行いました。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/post/gallery/first-art/cover.webp' />
     <link rel="shortcut icon" href="/img/favicon.jpg" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5H15X7SV2"></script>
 <script>
@@ -66,8 +66,8 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_4a8c446d67d1e9ad.jpg" width="300"
-                            height="438" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/avatar_hu_8f4259d0e9f0b372.jpg" width="300"
+                            height="286" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
@@ -262,8 +262,12 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/post/gallery/first-art/">
-                
-                    <img src="/cover.webp" loading="lazy" alt="Featured image of post PonyDiffusion V6 と自作LoRAの比較検証" />
+                <img src="/post/gallery/first-art/cover_hu_c4b8bcfd377e11bf.webp"
+                        srcset="/post/gallery/first-art/cover_hu_c4b8bcfd377e11bf.webp 800w, /post/gallery/first-art/cover_hu_a11015c877c1df98.webp 1600w"
+                        width="800" 
+                        height="1000" 
+                        loading="lazy"
+                        alt="Featured image of post PonyDiffusion V6 と自作LoRAの比較検証" />
                 
             </a>
         </div>
@@ -291,7 +295,7 @@
     
         
         <h3 class="article-subtitle">
-            PonyDiffusion V6をベースに、自作した画風LoRA（強度0.8）の適用テストを行いました。色使いと線の太さの変化に注目しています。
+            JANKU V6とOne obsession V19の比較検証を行いました。
         </h3>
         
     </div>
@@ -343,8 +347,8 @@
     
     
     <h2 id="比較検証-slider">比較検証 (Slider)
-</h2><p>ベースモデルと、LoRA適用後（Weight: 0.8）の比較です。
-スライダーを動かすと、LoRAによって彩度が上がり、主線がくっきりする様子が確認できます。</p>
+</h2><p>ベースモデルと、oneObsessionの比較です。
+スライダーを動かすと、</p>
 <script type="module" defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
 
@@ -404,14 +408,14 @@
   <figure slot="first" style="margin:0;">
     <img src="base.webp" alt="Before">
     
-    <div class="slider-label label-before">Base Model (Pony V6)</div>
+    <div class="slider-label label-before">Base Model (JANKU V6)</div>
     
   </figure>
   
   <figure slot="second" style="margin:0;">
-    <img src="lora.webp" alt="After">
+    <img src="after.webp" alt="After">
     
-    <div class="slider-label label-after">With LoRA (0.8)</div>
+    <div class="slider-label label-after">One obsession V19</div>
     
   </figure>
   
@@ -423,15 +427,11 @@
     </svg>
   </div>
 </img-comparison-slider>
+<p>JANKU V6とOne obsession V19の描写を比較すると、その方向性の違いが明確に現れます。JANKU V6は輪郭線が際立つアニメ調の表現を得意とし、キャラクターを鮮やかに描き出します。一方、One obsession V19は質感や陰影が非常に緻密で、実写に近いリアルな空気感を纏っています。スライダーを動かして、それぞれのモデルが持つ独特の質感の差をぜひ体感してみてください。</p>
+<p>個人的にはJANKの方が好みです。</p>
 <hr>
 <h2 id="制作ノート">制作ノート
-</h2><p>今回は <strong>ComfyUI</strong> を使用して生成しました。
-Pony系モデルはプロンプトの効きが良いですが、特定の画風を定着させるためにLoRAを作成しました。</p>
-<h3 id="苦労した点">苦労した点
-</h3><ul>
-<li>LoRAの学習データセット作成時に、タグ付け（キャプション）で背景情報を除外しないと、キャラクターの色味まで変わってしまう現象に苦戦しました。</li>
-<li>C#の自作ツールで「背景タグを一括削除」する機能を作り、データセットを再構築したところ改善しました。</li>
-</ul>
+</h2><p>今回は <strong>KritaAIDiffusion</strong> を使用して生成しました。</p>
 <hr>
 <h2 id="generation-data">Generation Data
 </h2><!-- raw HTML omitted -->
@@ -446,7 +446,7 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
   <tbody>
       <tr>
           <td>Model</td>
-          <td>PonyDiffusionV6 XL</td>
+          <td>JANKU V6</td>
       </tr>
       <tr>
           <td>Sampler</td>
@@ -471,15 +471,10 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
   </tbody>
 </table></div>
 <h4 id="prompt">Prompt
-</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>(masterpiece, best quality, score_9, score_8_up, score_7_up),
-</span></span><span style="display:flex;"><span>1girl, solo, standing, looking at viewer, simple background, white background,
-</span></span><span style="display:flex;"><span>silver hair, long hair, blue eyes, school uniform, serafuku,
-</span></span><span style="display:flex;"><span>&lt;lora:MyStyle_LoRA_v1:0.8&gt;
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1girl, breasts, solo, jewelry, large breasts, covered navel, nun, mole, cross, brown hair, earrings, one eye closed, blue eyes, necklace, cleavage, long hair, dress, piercing, looking at viewer, black dress, parted lips, ear piercing, arms up, habit, mole on breast, indoors, church, temple, arms behind head, cross necklace, blunt bangs, cross earrings, long sleeves, mole under eye, clothing cutout, (masterpiece, high quality, best quality:1.2), newest, absurdres, amazing quality, absurdly detailed composition, very aesthetic, extremely detailed, very awa, hyperdetailed,
+</span></span><span style="display:flex;"><span>IllusP0s,  usnr dynamic pose, foreshortening, extreme perspective masterpiece, best quality, very aesthetic , lazypos,masterpiece, best quality, very aesthetic, ultra-detailed, photorealistic, semi-realistic, highly detailed skin and texture, absurdres, newest, 8K,Mid4Mb, konya karasue, (shimhaq:0.6), (k-suwabe:0.70), abstract background, soft shading, Semi-realism, usnr
 </span></span></code></pre></div><h4 id="negativeprompt">NegativePrompt
-</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>(low quality, worst quality:1.4), (bad anatomy), (inaccurate limb),
-</span></span><span style="display:flex;"><span>bad hands, text, error, missing fingers, extra digit, fewer digits,
-</span></span><span style="display:flex;"><span>cropped, jpeg artifacts, signature, watermark, username, blurry,
-</span></span><span style="display:flex;"><span>score_4, score_5, score_6
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>(bad quality:1.1),(worst quality:1.1),bad details, (bad hands:1.2), sketch, jpeg artifacts, signature, watermark, ugly, poorly drawn, blurry, ugly, bad face, loli, (sweat:1.3), (wet:1.3), (oil:1.3), (shiny skin:1.3), (wet fur:1.5), water drops, glossy finish, plastic skin,, bad quality, low resolution, blurry,(stiff expression:1.5), (expressionless:1.5)
 </span></span></code></pre></div>
 </section>
 
@@ -488,9 +483,9 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
     
     <section class="article-tags">
         
-            <a href="/tags/ponydiffusion/">PonyDiffusion</a>
+            <a href="/tags/janku-v6/">JANKU V6</a>
         
-            <a href="/tags/lora/">LoRA</a>
+            <a href="/tags/one-obsession-v19/">One Obsession V19</a>
         
             <a href="/tags/original/">Original</a>
         

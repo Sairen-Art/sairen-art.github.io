@@ -16,11 +16,19 @@
         <description></description>
         </item>
         <item>
-        <title>LoRA</title>
-        <link>http://localhost:1313/tags/lora/</link>
+        <title>JANKU V6</title>
+        <link>http://localhost:1313/tags/janku-v6/</link>
         <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
         
-        <guid>http://localhost:1313/tags/lora/</guid>
+        <guid>http://localhost:1313/tags/janku-v6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>One Obsession V19</title>
+        <link>http://localhost:1313/tags/one-obsession-v19/</link>
+        <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
+        
+        <guid>http://localhost:1313/tags/one-obsession-v19/</guid>
         <description></description>
         </item>
         <item>
@@ -29,14 +37,6 @@
         <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
         
         <guid>http://localhost:1313/tags/original/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>PonyDiffusion</title>
-        <link>http://localhost:1313/tags/ponydiffusion/</link>
-        <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
-        
-        <guid>http://localhost:1313/tags/ponydiffusion/</guid>
         <description></description>
         </item>
         

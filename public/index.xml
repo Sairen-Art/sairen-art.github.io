@@ -7,58 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>© 2025 Sairen.Art. All rights reserved.</copyright>
-        <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>JANKU V6 vs OneObsession 徹底比較！</title>
-        <link>http://localhost:1313/post/review/janku-vs-oneobsession/</link>
-        <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
-        
-        <guid>http://localhost:1313/post/review/janku-vs-oneobsession/</guid>
-        <description>&lt;img src="http://localhost:1313/cover.jpg" alt="Featured image of post JANKU V6 vs OneObsession 徹底比較！" /&gt;&lt;p&gt;いつも使っている &lt;strong&gt;JANKU V6&lt;/strong&gt; と、最近話題の &lt;strong&gt;OneObsession&lt;/strong&gt; を比較してみました。&lt;/p&gt;
-&lt;h2 id=&#34;検証環境&#34;&gt;検証環境
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Steps:&lt;/strong&gt; 28&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CFG:&lt;/strong&gt; 7.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;比較結果&#34;&gt;比較結果
-&lt;/h2&gt;&lt;h3 id=&#34;janku-v6&#34;&gt;JANKU V6
-&lt;/h3&gt;&lt;p&gt;線の強弱がはっきりしていて、イラスト調が強いです。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/image1.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;JANKU V6の画像&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;oneobsession&#34;&gt;OneObsession
-&lt;/h3&gt;&lt;p&gt;こちらは空気感が柔らかく、少しリアル寄りな印象です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/image2.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;OneObsessionの画像&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;結論&#34;&gt;結論
-&lt;/h2&gt;&lt;p&gt;どっちも良いですが、用途によって使い分けられそうです！&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 16 Dec 2025 13:46:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PonyDiffusion V6 と自作LoRAの比較検証</title>
         <link>http://localhost:1313/post/gallery/first-art/</link>
         <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
         
         <guid>http://localhost:1313/post/gallery/first-art/</guid>
-        <description>&lt;img src="http://localhost:1313/cover.webp" alt="Featured image of post PonyDiffusion V6 と自作LoRAの比較検証" /&gt;&lt;h2 id=&#34;比較検証-slider&#34;&gt;比較検証 (Slider)
-&lt;/h2&gt;&lt;p&gt;ベースモデルと、LoRA適用後（Weight: 0.8）の比較です。
-スライダーを動かすと、LoRAによって彩度が上がり、主線がくっきりする様子が確認できます。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/gallery/first-art/cover.webp" alt="Featured image of post PonyDiffusion V6 と自作LoRAの比較検証" /&gt;&lt;h2 id=&#34;比較検証-slider&#34;&gt;比較検証 (Slider)
+&lt;/h2&gt;&lt;p&gt;ベースモデルと、oneObsessionの比較です。
+スライダーを動かすと、&lt;/p&gt;
 &lt;script type=&#34;module&#34; defer src=&#34;https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js&#34;&gt;&lt;/script&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css&#34; /&gt;
 
@@ -118,14 +75,14 @@
   &lt;figure slot=&#34;first&#34; style=&#34;margin:0;&#34;&gt;
     &lt;img src=&#34;base.webp&#34; alt=&#34;Before&#34;&gt;
     
-    &lt;div class=&#34;slider-label label-before&#34;&gt;Base Model (Pony V6)&lt;/div&gt;
+    &lt;div class=&#34;slider-label label-before&#34;&gt;Base Model (JANKU V6)&lt;/div&gt;
     
   &lt;/figure&gt;
   
   &lt;figure slot=&#34;second&#34; style=&#34;margin:0;&#34;&gt;
-    &lt;img src=&#34;lora.webp&#34; alt=&#34;After&#34;&gt;
+    &lt;img src=&#34;after.webp&#34; alt=&#34;After&#34;&gt;
     
-    &lt;div class=&#34;slider-label label-after&#34;&gt;With LoRA (0.8)&lt;/div&gt;
+    &lt;div class=&#34;slider-label label-after&#34;&gt;One obsession V19&lt;/div&gt;
     
   &lt;/figure&gt;
   
@@ -137,15 +94,11 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/img-comparison-slider&gt;
+&lt;p&gt;JANKU V6とOne obsession V19の描写を比較すると、その方向性の違いが明確に現れます。JANKU V6は輪郭線が際立つアニメ調の表現を得意とし、キャラクターを鮮やかに描き出します。一方、One obsession V19は質感や陰影が非常に緻密で、実写に近いリアルな空気感を纏っています。スライダーを動かして、それぞれのモデルが持つ独特の質感の差をぜひ体感してみてください。&lt;/p&gt;
+&lt;p&gt;個人的にはJANKの方が好みです。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;制作ノート&#34;&gt;制作ノート
-&lt;/h2&gt;&lt;p&gt;今回は &lt;strong&gt;ComfyUI&lt;/strong&gt; を使用して生成しました。
-Pony系モデルはプロンプトの効きが良いですが、特定の画風を定着させるためにLoRAを作成しました。&lt;/p&gt;
-&lt;h3 id=&#34;苦労した点&#34;&gt;苦労した点
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;LoRAの学習データセット作成時に、タグ付け（キャプション）で背景情報を除外しないと、キャラクターの色味まで変わってしまう現象に苦戦しました。&lt;/li&gt;
-&lt;li&gt;C#の自作ツールで「背景タグを一括削除」する機能を作り、データセットを再構築したところ改善しました。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/h2&gt;&lt;p&gt;今回は &lt;strong&gt;KritaAIDiffusion&lt;/strong&gt; を使用して生成しました。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;generation-data&#34;&gt;Generation Data
 &lt;/h2&gt;&lt;!-- raw HTML omitted --&gt;
@@ -160,7 +113,7 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td&gt;Model&lt;/td&gt;
-          &lt;td&gt;PonyDiffusionV6 XL&lt;/td&gt;
+          &lt;td&gt;JANKU V6&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;Sampler&lt;/td&gt;
@@ -185,15 +138,10 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h4 id=&#34;prompt&#34;&gt;Prompt
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(masterpiece, best quality, score_9, score_8_up, score_7_up),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1girl, solo, standing, looking at viewer, simple background, white background,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;silver hair, long hair, blue eyes, school uniform, serafuku,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;lora:MyStyle_LoRA_v1:0.8&amp;gt;
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1girl, breasts, solo, jewelry, large breasts, covered navel, nun, mole, cross, brown hair, earrings, one eye closed, blue eyes, necklace, cleavage, long hair, dress, piercing, looking at viewer, black dress, parted lips, ear piercing, arms up, habit, mole on breast, indoors, church, temple, arms behind head, cross necklace, blunt bangs, cross earrings, long sleeves, mole under eye, clothing cutout, (masterpiece, high quality, best quality:1.2), newest, absurdres, amazing quality, absurdly detailed composition, very aesthetic, extremely detailed, very awa, hyperdetailed,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;IllusP0s,  usnr dynamic pose, foreshortening, extreme perspective masterpiece, best quality, very aesthetic , lazypos,masterpiece, best quality, very aesthetic, ultra-detailed, photorealistic, semi-realistic, highly detailed skin and texture, absurdres, newest, 8K,Mid4Mb, konya karasue, (shimhaq:0.6), (k-suwabe:0.70), abstract background, soft shading, Semi-realism, usnr
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;negativeprompt&#34;&gt;NegativePrompt
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(low quality, worst quality:1.4), (bad anatomy), (inaccurate limb),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bad hands, text, error, missing fingers, extra digit, fewer digits,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cropped, jpeg artifacts, signature, watermark, username, blurry,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;score_4, score_5, score_6
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(bad quality:1.1),(worst quality:1.1),bad details, (bad hands:1.2), sketch, jpeg artifacts, signature, watermark, ugly, poorly drawn, blurry, ugly, bad face, loli, (sweat:1.3), (wet:1.3), (oil:1.3), (shiny skin:1.3), (wet fur:1.5), water drops, glossy finish, plastic skin,, bad quality, low resolution, blurry,(stiff expression:1.5), (expressionless:1.5)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>

@@ -6,38 +6,36 @@ categories:
     - Gallery
     - Review
 tags:
-    - PonyDiffusion
-    - LoRA
+    - JANKU V6
+    - One obsession V19
     - Original
 models:
-    - PonyDiffusionV6 XL
-loras:
-    - "MyStyle_LoRA_v1: 0.8"
-description: "PonyDiffusion V6をベースに、自作した画風LoRA（強度0.8）の適用テストを行いました。色使いと線の太さの変化に注目しています。"
+    - JANKU V6
+    - One obsession V19
+description: "JANKU V6とOne obsession V19の比較検証を行いました。"
 ---
 
 ## 比較検証 (Slider)
 
-ベースモデルと、LoRA適用後（Weight: 0.8）の比較です。
-スライダーを動かすと、LoRAによって彩度が上がり、主線がくっきりする様子が確認できます。
+ベースモデルと、oneObsessionの比較です。
+スライダーを動かすと、
 
 {{< slider 
     before="base.webp" 
-    after="lora.webp" 
-    label_before="Base Model (Pony V6)" 
-    label_after="With LoRA (0.8)" 
+    after="after.webp" 
+    label_before="Base Model (JANKU V6)" 
+    label_after="One obsession V19" 
 >}}
+
+JANKU V6とOne obsession V19の描写を比較すると、その方向性の違いが明確に現れます。JANKU V6は輪郭線が際立つアニメ調の表現を得意とし、キャラクターを鮮やかに描き出します。一方、One obsession V19は質感や陰影が非常に緻密で、実写に近いリアルな空気感を纏っています。スライダーを動かして、それぞれのモデルが持つ独特の質感の差をぜひ体感してみてください。
+
+個人的にはJANKの方が好みです。
 
 ---
 
 ## 制作ノート
 
-今回は **ComfyUI** を使用して生成しました。
-Pony系モデルはプロンプトの効きが良いですが、特定の画風を定着させるためにLoRAを作成しました。
-
-### 苦労した点
-* LoRAの学習データセット作成時に、タグ付け（キャプション）で背景情報を除外しないと、キャラクターの色味まで変わってしまう現象に苦戦しました。
-* C#の自作ツールで「背景タグを一括削除」する機能を作り、データセットを再構築したところ改善しました。
+今回は **KritaAIDiffusion** を使用して生成しました。
 
 ---
 
@@ -50,7 +48,7 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
 
 | 項目 | 設定値 |
 |---|---|
-| Model | PonyDiffusionV6 XL |
+| Model | JANKU V6 |
 | Sampler | Euler a |
 | Steps | 28 |
 | CFG Scale | 7.0 |
@@ -59,17 +57,12 @@ Pony系モデルはプロンプトの効きが良いですが、特定の画風�
 
 #### Prompt
 ```text
-(masterpiece, best quality, score_9, score_8_up, score_7_up),
-1girl, solo, standing, looking at viewer, simple background, white background,
-silver hair, long hair, blue eyes, school uniform, serafuku,
-<lora:MyStyle_LoRA_v1:0.8>
+1girl, breasts, solo, jewelry, large breasts, covered navel, nun, mole, cross, brown hair, earrings, one eye closed, blue eyes, necklace, cleavage, long hair, dress, piercing, looking at viewer, black dress, parted lips, ear piercing, arms up, habit, mole on breast, indoors, church, temple, arms behind head, cross necklace, blunt bangs, cross earrings, long sleeves, mole under eye, clothing cutout, (masterpiece, high quality, best quality:1.2), newest, absurdres, amazing quality, absurdly detailed composition, very aesthetic, extremely detailed, very awa, hyperdetailed,
+IllusP0s,  usnr dynamic pose, foreshortening, extreme perspective masterpiece, best quality, very aesthetic , lazypos,masterpiece, best quality, very aesthetic, ultra-detailed, photorealistic, semi-realistic, highly detailed skin and texture, absurdres, newest, 8K,Mid4Mb, konya karasue, (shimhaq:0.6), (k-suwabe:0.70), abstract background, soft shading, Semi-realism, usnr
 ```
 
 ####  NegativePrompt
 ```text
-(low quality, worst quality:1.4), (bad anatomy), (inaccurate limb),
-bad hands, text, error, missing fingers, extra digit, fewer digits,
-cropped, jpeg artifacts, signature, watermark, username, blurry,
-score_4, score_5, score_6
+(bad quality:1.1),(worst quality:1.1),bad details, (bad hands:1.2), sketch, jpeg artifacts, signature, watermark, ugly, poorly drawn, blurry, ugly, bad face, loli, (sweat:1.3), (wet:1.3), (oil:1.3), (shiny skin:1.3), (wet fur:1.5), water drops, glossy finish, plastic skin,, bad quality, low resolution, blurry,(stiff expression:1.5), (expressionless:1.5)
 ```
 
