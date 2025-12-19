@@ -1,0 +1,78 @@
+<script type="module" defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+
+<style>
+  img-comparison-slider {
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* ハンドル周りの色設定（FF14風に少し明るく） */
+    --divider-color: rgba(255, 255, 255, 0.8);
+    --default-handle-color: rgba(255, 255, 255, 0.8);
+    --divider-width: 2px;
+  }
+  
+  /* 画像のスタイル */
+  img-comparison-slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    /* 画像選択を無効化して操作性を向上 */
+    user-select: none; 
+    pointer-events: none;
+  }
+  
+  /* キャプションのスタイル */
+  .slider-label {
+    position: absolute;
+    top: 10px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    pointer-events: none; /* ラベルが操作の邪魔にならないように */
+  }
+  .label-before { left: 10px; }
+  .label-after { right: 10px; }
+
+  /* ハンドルのスタイル調整 */
+  .custom-handle {
+      width: 40px;
+      height: 40px;
+      /* FF14風の丸いハンドル背景 */
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+</style>
+
+<img-comparison-slider>
+  <figure slot="first" style="margin:0;">
+    <img src="{{ .Get "before" }}" alt="Before">
+    {{ if .Get "label_before" }}
+    <div class="slider-label label-before">{{ .Get "label_before" }}</div>
+    {{ end }}
+  </figure>
+  
+  <figure slot="second" style="margin:0;">
+    <img src="{{ .Get "after" }}" alt="After">
+    {{ if .Get "label_after" }}
+    <div class="slider-label label-after">{{ .Get "label_after" }}</div>
+    {{ end }}
+  </figure>
+  
+  <div slot="handle" class="custom-handle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+      <polyline points="9 18 3 12 9 6"></polyline>
+      <polyline points="21 18 15 12 21 6"></polyline>
+    </svg>
+  </div>
+</img-comparison-slider>

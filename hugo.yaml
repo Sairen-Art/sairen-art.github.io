@@ -1,0 +1,105 @@
+baseURL: "https://sairen-art.github.io/"
+languageCode: ja
+title: "Sairen.Art & Tech Lab" # ★タイトル決定！
+theme: hugo-theme-stack
+
+copyright: "© 2025 Sairen.Art. All rights reserved."
+
+# --- SEO & 基本設定 ---
+defaultContentLanguage: ja
+hasCJKLanguage: true
+summaryLength: 120
+
+
+# --- AIブログ用カテゴリ設定 ---
+taxonomies:
+  category: categories
+  tag: tags
+  model: models       # Checkpoint (例: PonyV6)
+  lora: loras         # LoRA (例: FlatLora)
+
+# --- メニュー設定 ---
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+      params:
+        icon: home
+
+    - name: Gallery
+      url: /categories/gallery/
+      weight: 2
+      params:
+        icon: image
+
+    - name: Tech & Tips
+      url: /categories/tech/
+      weight: 3
+      params:
+        icon: code
+
+    - name: Tools (C#)
+      url: /categories/tools/
+      weight: 4
+      params:
+        icon: terminal
+
+  # --- SNSリンク設定 (サイドバー用) ---
+  social:
+    - identifier: instagram
+      name: Instagram
+      url: "https://www.instagram.com/sairen.art/" # ★あなたのアカウントURL
+      params:
+        icon: instagram # Stackテーマ標準のインスタアイコン
+
+    - identifier: github
+      name: GitHub
+      url: "https://github.com/sairen-art"
+      params:
+        icon: github
+
+    - name: Privacy Policy
+      url: /page/privacy/
+      weight: 99
+      params:
+        icon: info
+
+params:
+  favicon: "/img/favicon.jpg"
+  sidebar:
+    emoji: 🎨
+    subtitle: "AI Art × C# Development" # サブタイトルもかっこよく
+    avatar:
+      enabled: true
+      local: true
+      src: "img/avatar.jpg" # 後でアイコン画像を設定
+
+  article:
+    toc: true
+    readingTime: true
+    license:
+      enabled: true
+      default: "CC BY-NC-SA 4.0"
+
+  comments:
+    enabled: true
+    provider: giscus
+
+    giscus:
+      repo: "sairen-art/sairen-art.github.io" # リポジトリ名
+      repoId: ""  # ※本来は必要ですが、Stackテーマならrepo名だけで動くことが多いです。動かない場合は後述します。
+      category: "Announcements" # Discussionsのカテゴリ（通常はAnnouncementsかGeneral）
+      categoryId: "" # ※同上
+      mapping: "pathname" # ページURLに基づいてスレッドを作成
+      reactionsEnabled: "1" # リアクション（いいね等）を許可
+      emitMetadata: "0"
+      inputPosition: "top" # コメント入力欄を上に
+      theme: "dark" # サイトに合わせて light または dark
+      lang: "ja"
+      loading: "lazy"
+
+# Google Analytics 4
+services:
+  googleAnalytics:
+    id: "G-W5H15X7SV2"

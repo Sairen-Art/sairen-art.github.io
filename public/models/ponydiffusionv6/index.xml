@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PonyDiffusionV6 on Sairen.Art &amp; Tech Lab</title>
+        <link>http://localhost:1313/models/ponydiffusionv6/</link>
+        <description>Recent content in PonyDiffusionV6 on Sairen.Art &amp; Tech Lab</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>© 2025 Sairen.Art. All rights reserved.</copyright>
+        <lastBuildDate>Tue, 16 Dec 2025 13:46:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/models/ponydiffusionv6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>First Art</title>
+        <link>http://localhost:1313/post/gallery/first-art/</link>
+        <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
+        
+        <guid>http://localhost:1313/post/gallery/first-art/</guid>
+        <description>&lt;img src="http://localhost:1313/cover.webp" alt="Featured image of post First Art" /&gt;&lt;h3 id=&#34;prompt&#34;&gt;Prompt
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(masterpiece, best quality), ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;workflow--comment&#34;&gt;Workflow / Comment
+&lt;/h3&gt;&lt;p&gt;ここにComfyUIの構成や、苦労した点などを書きます。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;次のアクション記事を作ってみましょう&#34;&gt;次のアクション：記事を作ってみましょう
+&lt;/h3&gt;&lt;p&gt;テンプレートが直ったので、実際に記事ファイルを生成して、画像を置いてみましょう。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;記事の生成:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new content/post/gallery/first-art --kind gallery
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;画像の配置:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作成されたフォルダ: &lt;code&gt;content/post/gallery/first-art/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;この中に、表示したい画像を &lt;strong&gt;&lt;code&gt;cover.webp&lt;/code&gt;&lt;/strong&gt; （または &lt;code&gt;cover.jpg&lt;/code&gt; 等）という名前で保存してください。&lt;/li&gt;
+&lt;li&gt;※もし画像が &lt;code&gt;.jpg&lt;/code&gt; なら、記事ファイル（&lt;code&gt;index.md&lt;/code&gt;）内の &lt;code&gt;image: &amp;quot;cover.webp&amp;quot;&lt;/code&gt; を &lt;code&gt;image: &amp;quot;cover.jpg&amp;quot;&lt;/code&gt; に書き換えてください。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;確認:&lt;/strong&gt;
+&lt;code&gt;hugo server&lt;/code&gt; でブラウザを確認し、画像付きで記事が表示されれば成功です！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

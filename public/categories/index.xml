@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Sairen.Art &amp; Tech Lab</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Recent content in Categories on Sairen.Art &amp; Tech Lab</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>© 2025 Sairen.Art. All rights reserved.</copyright>
+        <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Gallery</title>
+        <link>http://localhost:1313/categories/gallery/</link>
+        <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/categories/gallery/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Review</title>
+        <link>http://localhost:1313/categories/review/</link>
+        <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/categories/review/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
