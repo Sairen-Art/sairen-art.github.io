@@ -2,40 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/comparison/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/gallery/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/models/janku-v6/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/review/janku-vs-oneobsession/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/models/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/models/oneobsession/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/review/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-21T16:18:10+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-21T16:18:10+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/gallery/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/models/janku-v6/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/janku-v6/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/models/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/models/one-obsession-v19/</loc>
@@ -48,6 +33,12 @@
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/gallery/first-art/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/review/</loc>
+    <lastmod>2025-12-16T13:46:55+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-12-16T13:46:55+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/</loc>

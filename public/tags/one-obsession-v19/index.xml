@@ -80,7 +80,7 @@
   &lt;/figure&gt;
   
   &lt;figure slot=&#34;second&#34; style=&#34;margin:0;&#34;&gt;
-    &lt;img src=&#34;lora.webp&#34; alt=&#34;After&#34;&gt;
+    &lt;img src=&#34;after.webp&#34; alt=&#34;After&#34;&gt;
     
     &lt;div class=&#34;slider-label label-after&#34;&gt;One obsession V19&lt;/div&gt;
     
@@ -94,6 +94,8 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/img-comparison-slider&gt;
+&lt;p&gt;JANKU V6とOne obsession V19の描写を比較すると、その方向性の違いが明確に現れます。JANKU V6は輪郭線が際立つアニメ調の表現を得意とし、キャラクターを鮮やかに描き出します。一方、One obsession V19は質感や陰影が非常に緻密で、実写に近いリアルな空気感を纏っています。スライダーを動かして、それぞれのモデルが持つ独特の質感の差をぜひ体感してみてください。&lt;/p&gt;
+&lt;p&gt;個人的にはJANKの方が好みです。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;制作ノート&#34;&gt;制作ノート
 &lt;/h2&gt;&lt;p&gt;今回は &lt;strong&gt;KritaAIDiffusion&lt;/strong&gt; を使用して生成しました。&lt;/p&gt;

@@ -1,5 +1,5 @@
 ---
-title: "PonyDiffusion V6 と自作LoRAの比較検証"
+title: "PonyDiffusion V6 とOneObsessionの比較検証"
 date: 2025-12-16T13:46:55+09:00
 image: "cover.webp"
 categories:

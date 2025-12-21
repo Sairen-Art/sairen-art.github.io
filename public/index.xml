@@ -7,13 +7,78 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>© 2025 Sairen.Art. All rights reserved.</copyright>
-        <lastBuildDate>Tue, 16 Dec 2025 13:46:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>PonyDiffusion V6 と自作LoRAの比較検証</title>
+        <lastBuildDate>Sat, 20 Dec 2025 16:18:10 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C#erが静的サイトジェネレーターHugoでブログを作ってみた</title>
+        <link>http://localhost:1313/post/tech/build-hugo-blog/</link>
+        <pubDate>Sat, 20 Dec 2025 16:18:10 +0900</pubDate>
+        
+        <guid>http://localhost:1313/post/tech/build-hugo-blog/</guid>
+        <description>&lt;img src="http://localhost:1313/cover.jpg" alt="Featured image of post C#erが静的サイトジェネレーターHugoでブログを作ってみた" /&gt;&lt;p&gt;AIイラストの生成やC#でのツール開発を行っていると、どうしても &lt;strong&gt;「画像がきれいに見える場所」や「コードが見やすい場所」&lt;/strong&gt; が欲しくなります。&lt;/p&gt;
+&lt;p&gt;既存のブログサービスも良いですが、エンジニアとしては　&lt;strong&gt;「自分の手で管理できる」「Gitでバージョン管理したい」「Markdownで書きたい」&lt;/strong&gt;　という欲求には抗えません。&lt;/p&gt;
+&lt;p&gt;そこで今回、静的サイトジェネレーターの Hugo と、ホスティングサービスの GitHub Pages を組み合わせて、完全無料かつ爆速なブログを構築しました。 構築中にいくつか躓いたポイント（GA4の設定やGiscusなど）もあったので、備忘録として残しておきます。&lt;/p&gt;
+&lt;p&gt;なぜ Hugo + GitHub Pages なのか？
+爆速: データベースを使わず、事前にHTMLを生成するため表示が一瞬です。&lt;/p&gt;
+&lt;p&gt;無料: サーバー代がかかりません。ドメイン代も（GitHubドメインなら）不要です。&lt;/p&gt;
+&lt;p&gt;画像に強い: 今回採用したテーマ「Stack」はカード型デザインで、AIイラストのギャラリーに最適でした。&lt;/p&gt;
+&lt;p&gt;管理が楽: 記事はMarkdownファイル。GitでPushするだけで公開されます。&lt;/p&gt;
+&lt;p&gt;使用した技術スタック
+Engine: Hugo (Extended版)&lt;/p&gt;
+&lt;p&gt;Theme: Stack&lt;/p&gt;
+&lt;p&gt;Hosting: GitHub Pages&lt;/p&gt;
+&lt;p&gt;Comments: Giscus (GitHub Discussions利用)&lt;/p&gt;
+&lt;p&gt;Analytics: Google Analytics 4 (GA4)&lt;/p&gt;
+&lt;h1 id=&#34;1-環境構築とテーマの導入&#34;&gt;1. 環境構築とテーマの導入
+&lt;/h1&gt;&lt;p&gt;まずはHugoのインストールから。Stackテーマを使うには extended バージョンが必須です。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# バージョン確認（extendedと出ればOK）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# hugo v0.128.0-......+extended&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サイトを作成し、テーマをサブモジュールとして追加します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site my-blog --format yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;2-こだわりの設定-hugoyaml&#34;&gt;2. こだわりの設定 (hugo.yaml)
+&lt;/h1&gt;&lt;p&gt;今回一番工夫したのは、AIアートブログならではの 「カテゴリ設計」 です。 通常のカテゴリ・タグに加えて、models（使用モデル）や lora を設定ファイル（hugo.yaml）で定義しました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-YAML&#34; data-lang=&#34;YAML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# --- AIブログ用カテゴリ設定 ---&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;taxonomies&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;category&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;categories&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tag&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tags&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;model: models       # Checkpoint (例&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;PonyV6)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;lora: loras         # LoRA (例&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;FlatLora)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで、記事のヘッダーに models: [&amp;ldquo;JANKU V6&amp;rdquo;] と書くだけで、モデルごとの一覧ページが自動生成されるようになります。データベースいらずでこれは便利すぎます。&lt;/p&gt;
+&lt;h1 id=&#34;3-躓いたポイントga4の設定&#34;&gt;3. 躓いたポイント：GA4の設定
+&lt;/h1&gt;&lt;p&gt;Google Analytics 4の設定で少しハマりました。 hugo.yaml は大文字と小文字を厳密に区別するため、以下のように書く必要がありました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-YAML&#34; data-lang=&#34;YAML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ❌ 間違い（これだとタグが出力されない）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;googleAnalytics&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;G-XXXXXXXXXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ✅ 正解（idは小文字！）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;googleAnalytics&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;G-XXXXXXXXXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;テーマのドキュメントやHugoの仕様をよく確認することが大事ですね。&lt;/p&gt;
+&lt;h1 id=&#34;4-コメント欄の実装-giscus&#34;&gt;4. コメント欄の実装 (Giscus)
+&lt;/h1&gt;&lt;p&gt;静的サイトにはデータベースがないため、コメント欄の実装が課題になります。 今回は Giscus を採用しました。これは GitHub Discussions の機能を利用してコメント欄を実現するツールです。&lt;/p&gt;
+&lt;p&gt;完全無料&lt;/p&gt;
+&lt;p&gt;GitHubアカウントで書き込める（エンジニア・開発者向けに最適）&lt;/p&gt;
+&lt;p&gt;スパムが来にくい&lt;/p&gt;
+&lt;p&gt;導入は、Giscusアプリをリポジトリにインストールし、発行された repoId と categoryId を設定ファイルに貼るだけでした。&lt;/p&gt;
+&lt;h1 id=&#34;5-公開-github-actions&#34;&gt;5. 公開 (GitHub Actions)
+&lt;/h1&gt;&lt;p&gt;GitHub Pagesへのデプロイは、GitHub Actions を使って自動化しています。 ローカルで記事を書いて git push すると、GitHub上のサーバーが勝手にHugoをビルドして公開してくれます。&lt;/p&gt;
+&lt;p&gt;hugo.yaml (Workflow用) を .github/workflows/ に配置するだけで動くので、CI/CDの知識が深くなくても大丈夫でした。&lt;/p&gt;
+&lt;h1 id=&#34;まとめこれからの運用&#34;&gt;まとめ：これからの運用
+&lt;/h1&gt;&lt;p&gt;セットアップは完了し、プライバシーポリシーやお問い合わせフォームなど、収益化（AdSense等）を見据えた基盤も整いました。&lt;/p&gt;
+&lt;p&gt;これからは、メインである 「AIイラストの検証」 や 「C#ツールの開発ログ」 をどんどん発信していこうと思います。 「間口は広く、奥行きは深く」をモットーに運営していきますので、よろしくお願いします！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PonyDiffusion V6 とOneObsessionの比較検証</title>
         <link>http://localhost:1313/post/gallery/first-art/</link>
         <pubDate>Tue, 16 Dec 2025 13:46:55 +0900</pubDate>
         
         <guid>http://localhost:1313/post/gallery/first-art/</guid>
-        <description>&lt;img src="http://localhost:1313/post/gallery/first-art/cover.webp" alt="Featured image of post PonyDiffusion V6 と自作LoRAの比較検証" /&gt;&lt;h2 id=&#34;比較検証-slider&#34;&gt;比較検証 (Slider)
+        <description>&lt;img src="http://localhost:1313/post/gallery/first-art/cover.webp" alt="Featured image of post PonyDiffusion V6 とOneObsessionの比較検証" /&gt;&lt;h2 id=&#34;比較検証-slider&#34;&gt;比較検証 (Slider)
 &lt;/h2&gt;&lt;p&gt;ベースモデルと、oneObsessionの比較です。
 スライダーを動かすと、&lt;/p&gt;
 &lt;script type=&#34;module&#34; defer src=&#34;https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js&#34;&gt;&lt;/script&gt;
